@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite name="TestCafe Tests: Chrome 81.0.4044.129 / Windows 10" tests="12" failures="0" skipped="0" errors="0" time="151.763" timestamp="Fri, 01 May 2020 00:02:00 GMT" >
+  <testcase classname="AutoPrac" name="Create Account" time="15.84">
+  </testcase>
+  <testcase classname="AutoPrac" name="Login and verify account info" time="11.282">
+  </testcase>
+  <testcase classname="AutoPrac Product Browsing" name="Browse to view item detail: Printed Chiffon Dress" time="11.4">
+  </testcase>
+  <testcase classname="AutoPrac Shopping Cart" name="Verify cart contains item: Printed Chiffon Dress" time="29.292">
+  </testcase>
+  <testcase classname="AutoPrac Product Social Media Sharing" name="Verify social media sharing links" time="9.864">
+  </testcase>
+  <testcase classname="AutoPrac Login" name="Missing email address" time="8.377">
+  </testcase>
+  <testcase classname="AutoPrac Login" name="Missing password" time="9.336">
+  </testcase>
+  <testcase classname="AutoPrac Login" name="Email address has incorrect format" time="8.739">
+  </testcase>
+  <testcase classname="AutoPrac Login" name="Invalid Credentials" time="8.928">
+  </testcase>
+  <testcase classname="AutoPrac Login" name="Successful Login" time="9.548">
+  </testcase>
+  <testcase classname="AutoPrac Shopping Cart" name="Verify cart contains item: Printed Chiffon Dress" time="19.484">
+  </testcase>
+  <testcase classname="AutoPrac Product Searching" name="Search for item: Printed Chiffon Dress" time="9.376">
+  </testcase>
+</testsuite>

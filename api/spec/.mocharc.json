@@ -1,0 +1,10 @@
+{
+    "extension": ["js"],
+    "reporter": "mocha-multi-reporters",
+    "reporter-options": "configFile=spec/reporters.json",
+    "require": "source-map-support/register",
+    "timeout": 10000,
+    "retries": 2,
+    "ui": "bdd",
+    "exit": true
+}

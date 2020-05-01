@@ -1,0 +1,32 @@
+{
+  "name": "testcafe-ui-tests",
+  "version": "1.0.0",
+  "description": "UI test Suite",
+  "main": "main.js",
+  "scripts": {
+    "test": "testcafe chrome ./spec/r*.test/share*.spec.ts",
+    "tests": "testcafe",
+    "uiregression": "testcafe chrome:headless ./spec/regression.test/*.spec.ts",
+    "uibuild": "testcafe chrome:headless ./spec/build.test/*.spec.ts ./spec/smoke.test/*.spec.ts",
+    "uismoke": "testcafe chrome:headless ./spec/smoke.test/*.spec.ts",
+    "lint": "tslint -c tslint.json -e 'node_modules/**' -e 'dist/**' '**/*.ts'",
+    "notes": "test defaults in `.testcaferc.json`.  Execute scripts with `npm run tests` or similar"
+  },
+  "repository": {
+    "type": "git",
+    "url": "yes"
+  },
+  "keywords": [
+    "UI",
+    "testing"
+  ],
+  "author": "HowePC",
+  "license": "ISC",
+  "dependencies": {
+    "testcafe": "1.8.4",
+    "typescript": "3.8.3"
+  },
+  "devDependencies": {
+    "tslint": "6.1.2"
+  }
+}

@@ -1,0 +1,27 @@
+{
+    "filter": {
+        "fixtureGrep": ".*"
+    },
+    "pageLoadTimeout": 30000,
+    "selectorTimeout": 10000,
+    "assertionTimeout": 10000,
+    "debugMode": false,
+    "debugOnFail": false,
+    "browsers": "chrome:headless",
+    "src": "spec/**/*.spec.ts",
+    "quarantineMode": false,
+    "takeScreenshotsOnFails": false,
+    "screenshotPath": "./bin/results/screenshots/",
+    "developmentMode": false,
+    "skipJsErrors": true,
+    "hostname": "localhost",
+    "reporter": [
+        {
+            "name": "spec"
+        },
+        {
+            "name": "xunit",
+            "output": "./bin/results/results.xml"
+        }
+    ]
+}

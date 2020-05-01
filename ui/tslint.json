@@ -1,0 +1,14 @@
+{
+  "autoFixOnSave": true, 
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended"
+  ],
+  "jsRules": {},
+  "rules": {
+    "semicolon": [ true, "always" ],
+    "object-literal-sort-keys": false,
+    "no-console": [false, "log", "error"]    
+  },
+  "rulesDirectory": []
+}

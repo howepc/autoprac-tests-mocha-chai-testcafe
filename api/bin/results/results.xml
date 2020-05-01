@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.0470" tests="5" failures="0">
+  <testsuite name="Root Suite" timestamp="2020-04-29T21:23:04" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Get Product Info" timestamp="2020-04-29T21:23:04" tests="0" file="C:\code\howepc\autoprac-tests\api\dist\spec\regression.test\readProductInfo.spec.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Get Product Info - Bad Request 400 Response" timestamp="2020-04-29T21:23:04" tests="2" file="C:\code\howepc\autoprac-tests\api\dist\spec\regression.test\readProductInfo.spec.js" time="0.0010" failures="0">
+    <testcase name="Get Product Info Get Product Info - Bad Request 400 Response Invalid productId format" time="0.0010" classname="Invalid productId format">
+    </testcase>
+    <testcase name="Get Product Info Get Product Info - Bad Request 400 Response Nonexistent productId" time="0.0000" classname="Nonexistent productId">
+    </testcase>
+  </testsuite>
+  <testsuite name="Get Product Info - Success 200 Response" timestamp="2020-04-29T21:23:04" tests="1" file="C:\code\howepc\autoprac-tests\api\dist\spec\regression.test\readProductInfo.spec.js" time="0.0010" failures="0">
+    <testcase name="Get Product Info Get Product Info - Success 200 Response Get Product Info Successfully" time="0.0010" classname="Get Product Info Successfully">
+    </testcase>
+  </testsuite>
+  <testsuite name="Delete Product Info - Success 202 Response" timestamp="2020-04-29T21:23:04" tests="1" file="C:\code\howepc\autoprac-tests\api\dist\spec\regression.test\readProductInfo.spec.js" time="0.0010" failures="0">
+    <testcase name="Get Product Info Delete Product Info - Success 202 Response Delete Product info successfully" time="0.0010" classname="Delete Product info successfully">
+    </testcase>
+  </testsuite>
+  <testsuite name="Get Product Info after deletion - Bad Request 400 Response" timestamp="2020-04-29T21:23:04" tests="1" file="C:\code\howepc\autoprac-tests\api\dist\spec\regression.test\readProductInfo.spec.js" time="0.0440" failures="0">
+    <testcase name="Get Product Info Get Product Info after deletion - Bad Request 400 Response Failure after deletion" time="0.0440" classname="Failure after deletion">
+    </testcase>
+  </testsuite>
+</testsuites>

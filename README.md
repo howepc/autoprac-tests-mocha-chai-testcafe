@@ -74,3 +74,10 @@ Similarly, tests not yet ready for primetime can be skipped with <b>.skip</b> in
 
 ## Jenkins
 To run these tests in Jenkins, a <i>jenkinsfile</i> is included in the root of the project with commands necessary to run the tests and report the results back to Jenkins.
+
+## Delinting your code
+It's advisable to use a delinting extension for your code editor, but you can also check by moving into either the <b>api</b> or <b>ui</b> folder and running:
+<pre>
+npm run lint
+</pre>
+If there is no output from that command, nice work! There is no delinting required.

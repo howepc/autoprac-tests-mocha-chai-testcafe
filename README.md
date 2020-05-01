@@ -1,10 +1,16 @@
 # AutoPrac Tests
 
-This provides a framework for API and UI testing written in TypeScript using all open-source components. These tests are designed to run against the http://automationpractice.com website.
+This provides a framework for API and UI testing written in TypeScript using all open-source components.
+
+## Framework and Requirements
+
+These tests are designed to run against the http://automationpractice.com website.
+
+<b>Node.js is required</b> to run the tests. All other components will be installed by the commands below.
 
 UI tests utilize TestCafe and employ data and page objects separate from the tests.
 
-API tests, using a Mocha framework and Chai assertions, <b>perform no actual tests</b> and report successes, but provide the scaffolding for when API documentation becomes available.
+NOTE: API tests, using a Mocha framework and Chai assertions, <b>perform no actual tests and do not require an APIKey</b> and report successes, but provide the scaffolding for when API documentation becomes available.
 
 ## Running API Tests
 

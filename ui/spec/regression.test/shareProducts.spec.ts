@@ -16,7 +16,7 @@ fixture `AutoPrac Product Social Media Sharing`
 
 using (getProducts(), (product: IProduct) => {
 
-    test("Verify social media sharing links", async (t) => {
+    test("Verify social media sharing links for: " + product.productName, async (t) => {
         await t.maximizeWindow();
         await productPg.findItemDetail(product.productName);
 

@@ -19,11 +19,11 @@ import { readCSV } from "../lib/helpers";
 export function products(): IProduct[] {
 
     let records: any;
-    const csvFile = ("./spec/data/" + process.env.TEST_DATA_CSV || "none");
+    const csvFile = (process.env.TEST_DATA_CSV || "none");
     if (csvFile === "none") {
         records = [defaultProduct];
     } else {
-        records = readCSV(csvFile);
+        records = readCSV("./spec/data/" + csvFile);
     }
     return records;
 }

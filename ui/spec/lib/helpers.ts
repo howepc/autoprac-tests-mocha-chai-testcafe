@@ -1,6 +1,7 @@
 import { readFileSync, unlinkSync, writeFileSync } from "fs";
 import { Selector, t } from "testcafe";
 import { env } from "../data/environment.dat";
+import parse = require("csv-parse/lib/sync");
 
 /**
  * Generate a unique gmail address for an existing account
@@ -137,7 +138,6 @@ export function getSessionCustomer(): string {
 
 /**
  * deletes a session customer file
- * @returns {string} customer email address to get for future use
  * @example
  * await delSessionCustomer();
  */
@@ -147,4 +147,21 @@ export function delSessionCustomer(): void {
     } catch (e) {
         console.log("     " + e);
     }
+}
+
+/**
+ * Reads a csv file into an array object
+ * @param {string} csvFile - CSV file path and name
+ * @returns {string} array of objects labeled with CSV header names
+ * @example
+ * await getSessionCustomer();
+ */
+export function readCSV(csvFile: string): string[] {
+    let csvContent: any;
+    try {
+        csvContent = readFileSync(csvFile);
+    } catch (e) {
+        console.log("     " + e);
+    }
+    return parse(csvContent, {columns: true, skip_empty_lines: true});
 }

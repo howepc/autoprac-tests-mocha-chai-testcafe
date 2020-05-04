@@ -17,8 +17,11 @@ Param(
     
     [string]
     [ValidateSet("api", "ui", "both")]
-	$Type = "both",
-
+    $Type = "both",
+    
+    [string]
+    $CSVfile, ## file name of CSV file in ../spec/data folder.
+    
     [string]
     $APIKey = $env:API_KEY
 )
@@ -48,6 +51,7 @@ try
     # Load environment variables
     $env:TEST_ENV = $Env
     $env:API_KEY = $APIKey
+    $env:TEST_DATA_CSV = $CSVfile
 
     if ($Type -eq "api" -Or $Type -eq "both") {
         Set-Location api
@@ -81,4 +85,7 @@ try
 } catch {
 	Write-Error $_
 	exit 1
+} finally {
+    $env:TEST_ENV = ""
+    $env:TEST_DATA_CSV = ""
 }

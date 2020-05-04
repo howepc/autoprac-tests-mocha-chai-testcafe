@@ -1,8 +1,8 @@
 // Data
 import { env } from "../data/environment.dat";
-import { getProducts, IProduct } from "../data/test.dat";
+import { products, IProduct } from "../data/test.dat";
 
-import { using } from "../lib/theory";
+import { using } from "../lib/dataLoop";
 import { setCheckbox } from "../lib/helpers";
 
 // Page Objects
@@ -19,7 +19,7 @@ const productPg = new ProductPg();
 fixture `AutoPrac Shopping Cart`
 .page(env.url);
 
-using (getProducts(), (product: IProduct) => {
+using (products(), (product: IProduct) => {
 
     test("Verify cart contains item: " + product.productName, async (t) => {
         await t.maximizeWindow();

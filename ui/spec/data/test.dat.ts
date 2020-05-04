@@ -16,7 +16,7 @@ const defaultProduct: IProduct = {
 
 import { readCSV } from "../lib/helpers";
 
-export function getProducts(): IProduct[] {
+export function products(): IProduct[] {
 
     let records: any;
     const csvFile = ("./spec/data/" + process.env.TEST_DATA_CSV || "none");

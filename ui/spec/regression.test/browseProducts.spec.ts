@@ -1,8 +1,8 @@
 // Data
 import { env } from "../data/environment.dat";
-import { getProducts, IProduct } from "../data/test.dat";
+import { products, IProduct } from "../data/test.dat";
 
-import { using } from "../lib/theory";
+import { using } from "../lib/dataLoop";
 
 // Page Objects
 import { ProductPg } from "../pages/_index.pg";
@@ -12,7 +12,7 @@ const productPg = new ProductPg();
 fixture `AutoPrac Product Browsing`
 .page(env.url);
 
-using (getProducts(), (product: IProduct) => {
+using (products(), (product: IProduct) => {
 
     test("Browse to view item detail: " + product.productName, async (t) => {
         await t

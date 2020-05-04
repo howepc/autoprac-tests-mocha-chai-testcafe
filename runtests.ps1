@@ -70,7 +70,9 @@ try
 
     if ($Type -eq "ui" -Or $Type -eq "both") {
         Set-Location ui
-        npm install
+        if ($NPMInstallSkip -eq $false) {
+            npm install
+        }
         # Set TestCafe runtime config to appropriate test file specs
         if ($Set -eq "regression") { # run ALL tests
             npm run tests $Browser spec/*.test/**/*.spec.ts

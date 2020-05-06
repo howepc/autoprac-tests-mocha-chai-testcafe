@@ -17,8 +17,11 @@ Param(
     
     [string]
     [ValidateSet("api", "ui", "both")]
-	$Type = "both",
-
+    $Type = "both",
+    
+    [string]
+    $CSVfile, ## file name of CSV file in ../spec/data folder.
+    
     [string]
     $APIKey = $env:API_KEY
 )
@@ -48,6 +51,7 @@ try
     # Load environment variables
     $env:TEST_ENV = $Env
     $env:API_KEY = $APIKey
+    $env:TEST_DATA_CSV = $CSVfile
 
     if ($Type -eq "api" -Or $Type -eq "both") {
         Set-Location api
@@ -66,7 +70,9 @@ try
 
     if ($Type -eq "ui" -Or $Type -eq "both") {
         Set-Location ui
-        npm install
+        if ($NPMInstallSkip -eq $false) {
+            npm install
+        }
         # Set TestCafe runtime config to appropriate test file specs
         if ($Set -eq "regression") { # run ALL tests
             npm run tests $Browser spec/*.test/**/*.spec.ts
@@ -81,4 +87,7 @@ try
 } catch {
 	Write-Error $_
 	exit 1
+} finally {
+    $env:TEST_ENV = ""
+    $env:TEST_DATA_CSV = ""
 }

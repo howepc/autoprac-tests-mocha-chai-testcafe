@@ -24,7 +24,7 @@
   "license": "ISC",
   "dependencies": {
     "csv-parse": "^4.9.0",
-    "testcafe": "1.8.4",
+    "testcafe": "1.8.8",
     "typescript": "3.8.3"
   },
   "devDependencies": {
